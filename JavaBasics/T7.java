@@ -3,22 +3,19 @@ package org.JavaBasics;
 public class T7 {
     public static void main(String[] args) {
 
-        int[] numbers = {3, 8, 7, 11, 38, 24, 60, 0, 17};
+        int n = 10;
 
-        int max = numbers[0];
-        int min = numbers[0];
+        System.out.println("First " + n + " numbers in the Fibonacci series:");
 
-        for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] > max) {
-                max = numbers[i];
-            }
-            if (numbers[i] < min) {
-                min = numbers[i];
-            }
+        int num1 = 0;
+        int num2 = 1;
+
+        for (int i = 1; i <= n; ++i) {
+            System.out.print(num1 + " ");
+
+            int numNext = num1 + num2;
+            num1 = num2;
+            num2 = numNext;
         }
-
-        System.out.println("Max number in the array is " + max);
-        System.out.println("Min number in the array is " + min);
-
     }
 }
